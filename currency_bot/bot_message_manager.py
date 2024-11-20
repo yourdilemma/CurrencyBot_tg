@@ -37,19 +37,19 @@ def setup(bot):
             markup.add(button1, button2, button3, back)
             bot.send_message(message.chat.id,"Выберите обменную пару", reply_markup=markup)
         elif message.text=="RUB-USD":
-            bot.send_message(message.chat.id, f"По данным ЦБ 1 RUB = {round(data['Valute']['USD']['Value'], 2)} USD")
+            bot.send_message(message.chat.id, f"По данным ЦБ 1 USD = {round(data['Valute']['USD']['Value'], 2)} RUB")
         elif message.text=="RUB-EUR":
-            bot.send_message(message.chat.id, f"По данным ЦБ 1 RUB = {round(data['Valute']['EUR']['Value'], 2)} EUR")  
+            bot.send_message(message.chat.id, f"По данным ЦБ 1 EUR = {round(data['Valute']['EUR']['Value'], 2)} RUB")  
         elif message.text=="RUB-CNY":
-            bot.send_message(message.chat.id, f"По данным ЦБ 1 RUB = {round(data['Valute']['CNY']['Value'], 2)} CNY")
+            bot.send_message(message.chat.id, f"По данным ЦБ 1 CNY = {round(data['Valute']['CNY']['Value'], 2)} RUB")
         elif message.text=="USDT-BTC":
-            bot.send_message(message.chat.id, f"По данным Binance 1 USDT = {float(data_crypto_btc['price'])} BTC")
+            bot.send_message(message.chat.id, f"По данным Binance 1 BTC = {float(data_crypto_btc['price'])} USDT")
         elif message.text=="USDT-ETH":
-            bot.send_message(message.chat.id, f"По данным Binance 1 USDT = {float(data_crypto_eth['price'])} ETH")
+            bot.send_message(message.chat.id, f"По данным Binance 1 ETH = {float(data_crypto_eth['price'])} USDT")
         elif message.text=="USDT-SOL":
-            bot.send_message(message.chat.id, f"По данным Binance 1 USDT = {float(data_crypto_sol['price'])} SOL")
+            bot.send_message(message.chat.id, f"По данным Binance 1 SOL = {float(data_crypto_sol['price'])} USDT")
         elif message.text=="USDT-TON":
-            bot.send_message(message.chat.id, f"По данным Binance 1 USDT = {float(data_crypto_ton['price'])} TON")
+            bot.send_message(message.chat.id, f"По данным Binance 1 TON = {float(data_crypto_ton['price'])} USDT")
         elif message.text=="Назад":
             markup=types.ReplyKeyboardMarkup(resize_keyboard=True)
             button1=types.KeyboardButton("Курс обмена валют")
