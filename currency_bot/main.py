@@ -7,6 +7,7 @@ with open("currency_bot/config.json","r") as file: #скрываем токен
     api_token = config["api_token"]
 
 bot=telebot.TeleBot(api_token)
-bot_message_manager.setup(bot)
+bot_handler = bot_message_manager.Bot()
+bot_handler.setup(bot)
 
 bot.polling(none_stop=True, interval=0) #обновляем данные о работе бота
